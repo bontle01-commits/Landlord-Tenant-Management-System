@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE / editor files
+.idea/
+.vscode/
+*.code-workspace
+
+# Vite
+.vite/
+
+# Prisma (optional - keep migrations if you want)
+prisma/dev.db
+
+# Yarn / pnpm
+.yarn/
+.pnpm-store/
+
+# Coverage reports (if using Jest or other testing tools)
+coverage/
