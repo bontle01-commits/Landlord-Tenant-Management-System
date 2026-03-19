@@ -54,3 +54,11 @@ Other Tools:
 
 Git & GitHub for version control
 
+### Screenshots
+
+**Landlord Dashboard**  
+![Landlord Dashboard](frontend/src/assets/Landlord_dashboard.png)
+
+**Tenant Dashboard**  
+![Tenant Dashboard](frontend/src/assets/Tenant_dashboard.png)
+
