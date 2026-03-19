@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    container_name: accommodation_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD:  postgres
+      POSTGRES_DB: accommodation_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: accommodation_backend
+    restart: always
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/accommodation_db
+      JWT_SECRET: 8394hf983hf93hf983hf983hf98h3f98h3
+      PORT: 5000
+    volumes:
+      - .:/app
+    command: npm run dev
+
+volumes:
+  postgres_data:
